@@ -1,6 +1,4 @@
-GO_EASY_ON_ME=1
-export ARCHS = armv7 armv7s arm64
-include theos/makefiles/common.mk
+include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = MinimalCamera
 MinimalCamera_FILES = MinimalCamera.mm PFHeaderCell.mm

@@ -1,10 +1,8 @@
-export ARCHS = armv7 armv7s arm64
-
-include theos/makefiles/common.mk
+include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = MinimalCamera
 MinimalCamera_FILES = Tweak.xm
-MinimalCamera_FRAMEWORKS = UIKit 
+MinimalCamera_FRAMEWORKS = UIKit
 include $(THEOS_MAKE_PATH)/tweak.mk
 
 after-install::
