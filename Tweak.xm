@@ -11,8 +11,7 @@
 
 %hook CAMViewfinderViewController
 
-- (int)_aspectRatioForMode: (int)mode
-{
+- (NSInteger)_aspectRatioForMode: (NSInteger)mode {
     static NSString *settingsPath = @"/var/mobile/Library/Preferences/com.dekesto.minimalcamera.plist";
     NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsPath];
     BOOL keepRatio = ![[prefs allKeys] containsObject:@"keepRatio"] || [prefs[@"keepRatio"] boolValue];
@@ -36,8 +35,7 @@
 }
 
 %new
-- (void)toggleUI: (UITapGestureRecognizer *)sender
-{
+- (void)toggleUI: (UITapGestureRecognizer *)sender {
     static NSString *settingsPath = @"/var/mobile/Library/Preferences/com.dekesto.minimalcamera.plist";
     NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsPath];
     BOOL isEnabled = ![[prefs allKeys] containsObject:@"isEnabled"] || [prefs[@"isEnabled"] boolValue];
@@ -53,8 +51,7 @@
 }
 
 %new
-- (void)snapButton: (UITapGestureRecognizer *)sender
-{
+- (void)snapButton: (UITapGestureRecognizer *)sender {
     static NSString *settingsPath = @"/var/mobile/Library/Preferences/com.dekesto.minimalcamera.plist";
     NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsPath];
     BOOL isEnabled = ![[prefs allKeys] containsObject:@"isEnabled"] || [prefs[@"isEnabled"] boolValue];

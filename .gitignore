@@ -1,10 +1,6 @@
 .theos
 theos
-*/.theos
-*/theos
-debs/*
-*.deb
+debs
 _
 obj
-*/obj
-*/_
+*.deb
